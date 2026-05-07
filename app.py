@@ -304,7 +304,7 @@ user_question = st.text_input(
 if st.button("Get Insight", type="primary") and user_question:
     with st.spinner("Analyzing data..."):
         try:
-            client = anthropic.Anthropic()
+            client = anthropic.Anthropic(api_key=st.secrets["ANTHROPIC_API_KEY"])
             context = build_data_context()
 
             message = client.messages.create(
