@@ -308,7 +308,7 @@ if st.button("Get Insight", type="primary") and user_question:
             context = build_data_context()
 
             message = client.messages.create(
-                model="claude-sonnet-4-20250514",
+                model="claude-sonnet-4-5",
                 max_tokens=400,
                 messages=[
                     {
